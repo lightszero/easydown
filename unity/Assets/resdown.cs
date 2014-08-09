@@ -49,9 +49,11 @@ public class resdown : MonoBehaviour
                     });
             }
         }
-
+        //加载打散场景例子,未完成
+        //engine = new Engine001();
+        //engine.LoadLayout()
     }
-
+    Engine001 engine;
     // Update is called once per frame
     void Update()
     {
@@ -60,7 +62,7 @@ public class resdown : MonoBehaviour
         {
             strState = "have downloaded:" + ResmgrNative.Instance.taskState.downloadcount + " /Total " + ResmgrNative.Instance.taskState.taskcount;
         }
-
+        
     }
     string strState = "";
     List<Texture2D> loadedTexs = new List<Texture2D>();
