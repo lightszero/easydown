@@ -49,8 +49,12 @@ public class resdown : MonoBehaviour
                     });
             }
         }
-        //加载打散场景例子,未完成
-        //engine = new Engine001();
+        //加载打散场景例子
+        Engine001.Instance.LoadLayout("test1/prefabs", "scene", (obj) =>
+            {
+                Debug.Log("we load the scene:" + obj.name);
+            }
+        );
         //engine.LoadLayout()
     }
     Engine001 engine;

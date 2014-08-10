@@ -3,31 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
 
-public interface IEngine
-{
-    void Update(float deltatime);
-    void Destory();
-}
-class Engine
-{
 
-    static IEngine engine;
-    public static void UpdateEngine(float delta)
-    {
-        if (engine != null)
-        {
-            engine.Update(delta);
-        }
-    }
-    public static void UseEngine(IEngine engine)
-    {
-        if (engine != null)
-        {
-            engine.Destory();
-        }
-        Engine.engine = engine;
-    }
-}
 public interface IProxy<T>
 {
     void Unload();
@@ -43,19 +19,11 @@ public interface IProxy<T>
 }
 
 
-public class Engine001 : IEngine
+public class Engine001
 {
     #region Static&Instance
     static Engine001 g_this;
-    public static void Init()
-    {
-        if (g_this == null)
-        {
-            g_this = new Engine001();
-            Engine.UseEngine(g_this);
-        }
 
-    }
     public static void Exit()
     {
         g_this.Destory();
@@ -65,6 +33,10 @@ public class Engine001 : IEngine
     {
         get
         {
+            if (g_this == null)
+            {
+                g_this = new Engine001();
+            }
             return g_this;
         }
     }
@@ -154,10 +126,7 @@ public class Engine001 : IEngine
     {
 
     }
-    public void Update(float delta)
-    {
 
-    }
     RealAssetMgr assetMgrIO = null;
     public Dictionary<string, MyJson.JsonNode_Object> layoutDepends = new Dictionary<string, MyJson.JsonNode_Object>();
     public void LoadLayout(string respath, string layoutname, Action<IProxy<GameObject>> finish)

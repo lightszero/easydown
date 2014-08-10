@@ -1,7 +1,7 @@
 {
 "name":"scene",
 "active":true,
-"_id":4294945064,
+"_id":6634,
 "coms":[
     {
         "type":"UnityEngine.Transform",
@@ -14,9 +14,9 @@
     ],
 "child":[
     {
-        "name":"Cube",
+        "name":"Cube1",
         "active":true,
-        "_id":4294964994,
+        "_id":6592,
         "coms":[
             {
                 "type":"UnityEngine.Transform",
@@ -60,9 +60,9 @@
             ]
         },
     {
-        "name":"Cube",
+        "name":"Cube2",
         "active":true,
-        "_id":4294954334,
+        "_id":6612,
         "coms":[
             {
                 "type":"UnityEngine.Transform",
@@ -106,9 +106,9 @@
             ]
         },
     {
-        "name":"Cube",
+        "name":"Cube3",
         "active":true,
-        "_id":4294957394,
+        "_id":6638,
         "coms":[
             {
                 "type":"UnityEngine.Transform",
@@ -154,7 +154,7 @@
     {
         "name":"Cube",
         "active":true,
-        "_id":4294955828,
+        "_id":6602,
         "coms":[
             {
                 "type":"UnityEngine.Transform",
@@ -200,7 +200,7 @@
     {
         "name":"Sphere",
         "active":true,
-        "_id":4294951318,
+        "_id":6648,
         "coms":[
             {
                 "type":"UnityEngine.Transform",
